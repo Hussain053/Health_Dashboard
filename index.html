@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 Water · Meal · Sleep Tracker</h1>
+
+    <div class="tracker">
+      <label>💧 Water (glasses): <input type="number" id="water" min="0"/></label>
+      <label>🍱 Meals (count): <input type="number" id="meals" min="0"/></label>
+      <label>😴 Sleep (hours): <input type="number" id="sleep" min="0" max="24"/></label>
+      <button onclick="updateData()">Update & Analyze</button>
+    </div>
+
+    <canvas id="healthChart"></canvas>
+
+    <div class="tips" id="tipsBox"></div>
+
+    <div class="actions">
+      <button onclick="exportPDF()">📤 Export Report (PDF)</button>
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
